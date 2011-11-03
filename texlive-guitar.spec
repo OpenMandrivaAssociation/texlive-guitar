@@ -1,3 +1,9 @@
+# revision 17355
+# category Package
+# catalog-ctan /macros/latex/contrib/guitar
+# catalog-date 2010-03-06 16:54:30 +0100
+# catalog-license lppl
+# catalog-version 1.6
 Name:		texlive-guitar
 Version:	1.6
 Release:	1
@@ -48,6 +54,7 @@ Peeters.
 #- source
 %doc %{_texmfdistdir}/source/latex/guitar/guitar.dtx
 %doc %{_texmfdistdir}/source/latex/guitar/guitar.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ Peeters.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
