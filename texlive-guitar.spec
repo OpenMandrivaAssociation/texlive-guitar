@@ -1,16 +1,16 @@
-# revision 17355
+# revision 32258
 # category Package
 # catalog-ctan /macros/latex/contrib/guitar
-# catalog-date 2010-03-06 16:54:30 +0100
-# catalog-license lppl
+# catalog-date 2013-11-27 01:09:36 +0100
+# catalog-license lppl1.3
 # catalog-version 1.6
 Name:		texlive-guitar
 Version:	1.6
-Release:	2
+Release:	3
 Summary:	Guitar chords and song texts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/guitar
-License:	LPPL
+License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/guitar.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/guitar.doc.tar.xz
 Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/guitar.source.tar.xz
@@ -38,6 +38,7 @@ Peeters.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/latex/guitar/guitar.sty
+%doc %{_texmfdistdir}/doc/latex/guitar/README
 %doc %{_texmfdistdir}/doc/latex/guitar/guitar.pdf
 %doc %{_texmfdistdir}/doc/latex/guitar/guitar.tex
 %doc %{_texmfdistdir}/doc/latex/guitar/guitar.txt
@@ -54,17 +55,3 @@ Peeters.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.6-2
-+ Revision: 752454
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.6-1
-+ Revision: 718592
-- texlive-guitar
-- texlive-guitar
-- texlive-guitar
-- texlive-guitar
-
