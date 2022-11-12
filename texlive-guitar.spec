@@ -1,19 +1,13 @@
-# revision 32258
-# category Package
-# catalog-ctan /macros/latex/contrib/guitar
-# catalog-date 2013-11-27 01:09:36 +0100
-# catalog-license lppl1.3
-# catalog-version 1.6
 Name:		texlive-guitar
-Version:	1.6
-Release:	12
+Version:	32258
+Release:	1
 Summary:	Guitar chords and song texts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/guitar
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/guitar.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/guitar.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/guitar.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/guitar.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/guitar.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/guitar.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ recommends use of an additional package such as gchords by K.
 Peeters.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -48,7 +42,8 @@ Peeters.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
