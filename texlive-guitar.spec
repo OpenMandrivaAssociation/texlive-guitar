@@ -1,6 +1,6 @@
 Name:		texlive-guitar
 Version:	32258
-Release:	1
+Release:	2
 Summary:	Guitar chords and song texts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/guitar
