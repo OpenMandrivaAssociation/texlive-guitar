@@ -3,7 +3,7 @@ Version:	32258
 Release:	2
 Summary:	Guitar chords and song texts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/guitar
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/guitar
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/guitar.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/guitar.doc.r%{version}.tar.xz
